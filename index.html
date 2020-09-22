@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Cisco-Webex-Downloader-Bookmarklet</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Cisco-Webex-Downloader-Bookmarklet" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://www.prakharj.me/Cisco-Webex-Downloader-Bookmarklet/" />
+<meta property="og:url" content="http://www.prakharj.me/Cisco-Webex-Downloader-Bookmarklet/" />
+<meta property="og:site_name" content="Cisco-Webex-Downloader-Bookmarklet" />
+<script type="application/ld+json">
+{"@type":"WebSite","url":"http://www.prakharj.me/Cisco-Webex-Downloader-Bookmarklet/","name":"Cisco-Webex-Downloader-Bookmarklet","headline":"Cisco-Webex-Downloader-Bookmarklet","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/Cisco-Webex-Downloader-Bookmarklet/assets/css/style.css?v=285497893e0a10d56b7e0dfcdbb54b1b7df321b7">
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      
+      <h1><a href="https://github.com/prakhar-ai/Cisco-Webex-Downloader-Bookmarklet">Cisco Webex Downloader Bookmarklet</a></h1>
+      
+
+      <p>The Cisco Webex Downloader Bookmarklet is a simple JS Script that can be used to download Cisco Webex Recordings. It uses clever API calls to the Cisco Webex Server to fetch the video recordings when no download button is available.</p>
+
+<h2 id="installation">Installation</h2>
+<p>Visit this page and drag this <a href ="javascript:(function(){let REGEX = /^https?:\/\/(.+?)\.webex\.com\/(?:recordingservice|webappng)\/sites\/(.+?)\/recording\/(?:play|playback)\/([a-f0-9]{32})/g;let match = REGEX.exec(location.href);let subdomain = match[1];let sitename = match[2];let recording_id = match[3];function downloadURI(uri, name) { let link = document.createElement('a'); link.download = name; link.href = uri; document.body.appendChild(link); link.click(); document.body.removeChild(link); delete link; }let Password = prompt('Enter Recording Password: ');fetch(`https://${subdomain}.webex.com/webappng/api/v1/recordings/${recording_id}/stream?siteurl=${sitename}`,{ headers : { 'accept': 'application/json, text/plain, */*', 'accesspwd' : Password } }) .then(response => response.json()) .then(data => { let host = data['mp4StreamOption']['host']; let recording_dir = data['mp4StreamOption']['recordingDir']; let timestamp = data['mp4StreamOption']['timestamp']; let token = data['mp4StreamOption']['token']; let xml_name = data['mp4StreamOption']['xmlName']; let playback_option = data['mp4StreamOption']['playbackOption']; let meeting_name = data['recordName']; fetch(`${host}/apis/html5-pipeline.do?recordingDir=${recording_dir}&timestamp=${timestamp}&token=${token}&xmlName=${xml_name}&isMobileOrTablet=false&ext=${playback_option}`) .then(response => response.text()) .then(text => (new window.DOMParser()).parseFromString(text, 'text/xml')) .then(data => { let filename = data.getElementsByTagName('Sequence')[0].textContent; let mp4Url = `${host}/apis/download.do?recordingDir=${recording_dir}&timestamp=${timestamp}&token=${token}&fileName=${filename}`; downloadURI(mp4Url,'Download.mp4') }) .catch(exception => { console.log('Error') }); }) .catch(exception => { console.log('Error') });})();">link</a> to the Bookmarks Toolbar in your browser (press Ctrl-Shift-B to view the bookmarks toolbar).</p>
+    <h2 id="usage">Usage</h2>
+<ul>
+  <li>Visit the Cisco Webex recording page and click on the Bookmarklet.</li>
+  <li>Enter the password in the prompt</li>
+  <li>The download will start automatically</li>
+</ul>
+
+
+      
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+    
+  </body>
+</html>
