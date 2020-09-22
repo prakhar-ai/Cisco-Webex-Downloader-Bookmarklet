@@ -1,37 +1,10 @@
-## Welcome to GitHub Pages
+# Cisco Webex Downloader Bookmarklet
+The Cisco Webex Downloader Bookmarklet is a simple JS Script that can be used to download Cisco Webex Recordings. It uses clever API calls to the Cisco Webex Server to fetch the video recordings when no download button is available.
 
-You can use the [editor on GitHub](https://github.com/prakhar-ai/Cisco-Webex-Downloader-Bookmarklet/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+## Installation
+Visit this page and drag the link to the Bookmarks Toolbar in your browser (press Ctrl-Shift-B to view the bookmarks toolbar).
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/prakhar-ai/Cisco-Webex-Downloader-Bookmarklet/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+## Usage
+- Visit the Cisco Webex recording page and click on the Bookmarklet.
+- Enter the password in the prompt
+- The download will start automatically
