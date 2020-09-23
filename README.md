@@ -7,7 +7,7 @@ Visit [this](https://www.prakharj.me/Cisco-Webex-Downloader-Bookmarklet/) page a
 
 ## Usage
 - Visit the Cisco Webex recording page 
-- Enter the password and load the video
+- Enter the password and play the video
 - Click on the Bookmarklet
 - Enter the password in the prompt
 - The download will start automatically
