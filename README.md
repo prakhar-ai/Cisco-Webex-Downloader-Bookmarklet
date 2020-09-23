@@ -13,4 +13,4 @@ Visit [this](https://www.prakharj.me/Cisco-Webex-Downloader-Bookmarklet/) page a
 - The download will start automatically
 
 ## Credits
-- This project is heavily borrowed from [WebXDownloader](https://github.com/jacopo-j/WebXDownloader) project by [Japoco Jannone](https://github.com/jacopo-j)
+- This project is heavily borrowed from the [WebXDownloader](https://github.com/jacopo-j/WebXDownloader) project by [Japoco Jannone](https://github.com/jacopo-j)
