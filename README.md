@@ -13,4 +13,4 @@ Visit [this](https://www.prakharj.me/Cisco-Webex-Downloader-Bookmarklet/) page a
 - The download will start automatically
 
 ## Credits
-- This project heavily borrows from the [WebXDownloader](https://github.com/jacopo-j/WebXDownloader) project by [Japoco Jannone](https://github.com/jacopo-j)
+- This project heavily borrows from the [WebXDownloader](https://github.com/jacopo-j/WebXDownloader) project by [Japoco Jannone](https://github.com/jacopo-j).This project fixes some issues with the WebXDownloader project by adding support for password protected recordings and packaging it into a neat bookmarklet.
